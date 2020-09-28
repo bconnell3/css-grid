@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="inner-container">
+            <div class="header-mobile">
+                <h1>Magazine</h1>
+                <div class="menu-icon">
+                    <svg viewBox="0 0 32 32"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="grid-container">
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div>
+                <img src="img/healthy-breakfast-pots.jpg" alt="Healthy Breakfast">
+                <h3>Sept 14, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fuga error atque a consectetur id repellendus, minus ipsam ut voluptas? Neque recusandae asperiores quasi quam aliquam totam ratione ipsum ut.</p>
+            </div>
+            <div>
+                <img src="img/holding-coffee-in-bed.jpg" alt="Coffee in Bed">
+                <h3>August 31, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, praesentium alias maxime necessitatibus hic ut aliquid, aspernatur, possimus explicabo officia adipisci at dignissimos! Corrupti nisi aut minima asperiores cumque vitae?</p>
+            </div>
+            <div>
+                <img src="img/legs-running-on-track.jpg" alt="Man Jogging">
+                <h3>August 17, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quam quae atque vero. Nihil, fuga numquam magnam in dicta explicabo beatae distinctio! Aspernatur voluptatibus dolorem distinctio dolores mollitia, omnis consequuntur!</p>
+            </div>
+            <div>
+                <img src="img/writing-down-goals.jpg" alt="Journaling">
+                <h3>August 3, 2020</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet officia voluptates et ipsa, eos fugit id consequatur iusto dicta. Tempora voluptatibus temporibus blanditiis? At ducimus soluta molestiae. Tempora, nam dolore.</p>
+            </div>
+            <div>
+                <img src="img/healthy-salad.jpg" alt="Salad">
+                <h3>July 20, 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi fugiat eos iure quaerat, numquam nam odio sed enim quidem beatae sunt laudantium, reiciendis quibusdam? Eos qui nam accusamus ab eligendi?</p>
+            </div>
+        </section>
+
+        <section class="popular">
+            <h2>Popular Posts</h2>
+            <div class="card">
+                <img src="img/vrkasana-yoga.jpg" alt="Yoga on Rooftop">
+                <div>
+                    <h3>Benefits of Yoga</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorem cumque velit, molestias veritatis neque eaque autem saepe a quisquam.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/abstract.jpg" alt="Abstract Colors">
+                <div>
+                    <h3>Meditation for the Mind</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, at fugiat odit sapiente vel cumque quam, ipsum minima aliquam officia architecto?</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/beach-at-sunrise.jpg" alt="The beach at sunrise">
+                <div>
+                    <h3>Location, Location, Location</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum eius, aut sunt ea magnam eos similique veritatis, ullam mollitia, placeat praesentium!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/cat-photo.jpg" alt="Cat">
+                <div>
+                    <h3>Family Pets</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt temporibus corrupti debitis dignissimos nesciunt doloribus eligendi provident minus enim ipsa itaque maiores quidem.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/beach-wind.jpg" alt="Windy Day at Beach">
+                <div>
+                    <h3>Taking Breaks</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur magnam inventore non est expedita eum pariatur, reiciendis amet voluptatibus ratione.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <h3>Magazine</h3>
+            </div>
+            <div>
+                <h3>Navigation</h3>
+                <ul class="footer-list">
+                    <li>Home</li>
+                    <li>Popular</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Categories</h3>
+                <ul class="footer-list">
+                    <li>Meals</li>
+                    <li>Exercise</li>
+                    <li>Mind</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Newsletter</h3>
+                <form action="#">
+                    <label for="email">email</label>
+                    <input type="text" id="email">
+                </form>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+</html>

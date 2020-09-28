@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #323232;
+}
+
+.grid-container,
+header {
+    padding: 1rem;
+}
+
+
+/* ********** typography *********** */
+h1 {
+    font-size: 2.369rem;
+    line-height: 4.5rem;
+    margin-right: 1rem;
+}
+
+h2 {
+    font-size: 1.777rem;
+    line-height: 3rem;
+}
+
+h3 {
+    font-size: 1.333rem;
+    line-height: 3rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* *********** header *********** */
+header {
+    border-bottom: 1px solid rgb(222, 222, 222);
+    box-shadow: 0 0 8px 0 rgb(222, 222, 222);
+}
+
+header .header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    width: 3.4375rem;
+    padding: 0.25rem;
+}
+
+nav {
+    flex: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 600ms;
+}
+
+.show-nav {
+    max-height: 4.5rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links li {
+    line-height: 4.5rem;
+}
+
+a {
+    /* background color to highlight the clickable/tap area */
+    /* background-color: grey;  */
+    display: block;
+    padding: 0 1rem;
+}
+
+/* ***************** Grid Layout step 1: layout the larger page elements - header, sections, and footer */
+.grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    /* this creates an implicit grid, meaning the columns have not yet been defined and it uses the default one column, stacking layout which works well for mobile */
+}
+
+/* go ahead and layout the content inside the grid cells (using flow, flexbox, grid, or mulit-columns) for the mobile view */
+.card {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    margin-bottom: 1.5rem;
+    border-radius: 3px 3px 0 0;
+}
+
+.card > div {
+    margin: 0 1rem;
+}
+
+
+footer {
+    border-top: 1px solid rgb(222, 222, 222); 
+    padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -1rem;
+}
+
+footer > div {
+    margin: 0 1rem 2rem 1rem;
+    flex: 1;
+}
+
+@media (min-width: 30em) {
+    .card {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .card img {
+        margin: 0;
+        border-radius: 3px;
+        flex: 1;
+        /* can fix up this issue of the image fitting into the card better with picture element/art direction thumbnail */
+    }
+
+    .card > div{
+        flex: 2;
+        margin: 1rem;
+    }
+}
+
+
+/* ***************** Grid Layout step 2: add and define the grid columns for larger views. place content */
+@media (min-width: 75em) {
+    .grid-container {
+        /* using a 12 column grid system */
+        grid-template-columns: repeat(12, 1fr);
+        /* or, realizing that this container will have a max of 2 columns, the first spanning 8 of the 12 columns and the second spanning 4 of the 12 columns */
+        grid-template-columns: 8fr 4fr;
+    }
+
+    /* explicitly place grid items -  section (recent-posts), section (popular), & footer.*/
+    .recent-posts {
+        grid-column: 1 / span 1;
+    }
+    
+    .popular {
+        grid-column: 2 / span 1;
+    }
+
+    footer {
+        grid-column: 1 / -1;
+    }
+
+    /* Rearrange the content inside recent section using another grid */
+    .recent-posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .recent-posts > div:first-of-type {
+        grid-column: 1 / span 2;
+    }
+
+    .popular h2 {
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* lastly, find a breakpoint to best show the nav and add a max fixed width */
+@media (min-width: 40em) {
+    .menu-icon {
+        display: none;
+    }
+
+    nav {
+        max-height: 6.5625rem;
+        flex: initial;
+    }
+
+    header > .inner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-links li {
+        margin: 0 1rem;
+    }
+
+}
+
+@media (min-width: 110em) {
+    .grid-container,
+    .inner-container {
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+}
